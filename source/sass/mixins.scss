@@ -1,0 +1,12 @@
+@mixin title-desktop {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 49px;
+}
+
+@mixin list-style ($margin, $padding, $list-style-type) {
+  margin: $margin;
+  padding: $padding;
+  list-style-type: $list-style-type;
+}

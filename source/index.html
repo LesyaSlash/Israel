@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Израиль</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="fonts/fira-sans-regular.woff2" as="font">
+</head>
+<body>
+  <header class="page-header">
+    <a class="page-header__link page-header__link--phone" href="tel:+97226216581">+ (972) 2 – 621 – 6581</a>
+    <a class="page-header__logo">
+      <img src="img/logo.png" srcset="img/logo@2x.png 2x" alt="Логотип фирмы" width="137" height="48">
+    </a>
+    <a class="page-header__link page-header__link--modal" href="#">заказать звонок</a>
+  </header>
+  <main class="page-main">
+    <section class="intro">
+      <picture>
+        <!-- 1х: 320px; 2x: 640px -->
+        <source type="image/webp" media="(max-width: 767px)"
+          srcset="img/israel-mob.webp 1x, img/israel-mob@2x.webp 2x">
+        <!-- 1х: 1018px; 2x: 2036px -->
+        <source type="image/webp" srcset="img/israel.webp 1x, img/israel@2x.webp 2x">
+
+        <!-- 1х: 320px; 2x: 640px -->
+        <source media="(max-width: 767px)" srcset="img/israel-mob.png 1x, img/israel-mob@2x.png 2x">
+        <!-- 1х: 1018px; 2x: 2036px -->
+        <img src="img/israel.png" srcset="img/israel@2x.png 2x" width="1018" height="340"
+          alt="Израиль">
+      </picture>
+      <div class="intro__wrapper">
+        <h1>Учёба, путешествие и карьера для еврейской молодёжи</h1>
+        <picture>
+          <!-- 1х: 320px; 2x: 640px -->
+          <source type="image/webp" media="(max-width: 767px)"
+            srcset="img/girl-mob.webp 1x, img/girl-mob@2x.webp 2x">
+          <!-- 1х: 1366px; 2x: 2732px -->
+          <source type="image/webp" srcset="img/girl.webp 1x, img/girl@2x.webp 2x">
+
+          <!-- 1х: 320px; 2x: 640px -->
+          <source media="(max-width: 767px)" srcset="img/girl-mob.png 1x, img/girl-mob@2x.png 2x">
+          <!-- 1х: 1366px; 2x: 2732px -->
+          <img src="img/girl.png" srcset="img/girl@2x.png 2x" width="1366" height="966"
+            alt="Фото девушки с израильским флагом">
+        </picture>
+        <svg class="scroll-icon" width="76" height="76">
+          <use xlink:href="img/sprite.svg#scroll"></use>
+        </svg>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
