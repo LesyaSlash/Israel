@@ -3,6 +3,22 @@
   font-weight: 700;
   font-size: 40px;
   line-height: 49px;
+  color: $blue;
+}
+
+@mixin h3-desktop {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: -0.56px;
+  line-height: 34px;
+  color: $blue;
+}
+
+@mixin h3-mobile {
+  font-size: 24px;
+  letter-spacing: -0.48px;
+  line-height: 29px;
 }
 
 @mixin list-style ($margin, $padding, $list-style-type) {

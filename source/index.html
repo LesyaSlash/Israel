@@ -5,52 +5,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Израиль</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/fira-sans-regular.woff2" as="font">
 </head>
 <body>
   <header class="page-header">
-    <a class="page-header__link page-header__link--phone" href="tel:+97226216581">+ (972) 2 – 621 – 6581</a>
+    <a class="page-header__item page-header__item--phone" href="tel:+97226216581">+ (972) 2 – 621 – 6581</a>
     <a class="page-header__logo">
-      <img src="img/logo.png" srcset="img/logo@2x.png 2x" alt="Логотип фирмы" width="137" height="48">
+      <picture>
+        <!--1х: 137px; 2x: 274px-->
+        <source type="image/webp" srcset="img/logo.webp 1x, img/logo@2x.webp 2x">
+        <img src="img/logo.png" srcset="img/logo@2x.png 2x" alt="Логотип фирмы" width="137" height="48">
+      </picture>
     </a>
-    <a class="page-header__link page-header__link--modal" href="#">заказать звонок</a>
+    <a class="page-header__item page-header__item--modal" href="#">заказать звонок</a>
   </header>
   <main class="page-main">
     <section class="intro">
-      <picture>
-        <!-- 1х: 320px; 2x: 640px -->
-        <source type="image/webp" media="(max-width: 767px)"
-          srcset="img/israel-mob.webp 1x, img/israel-mob@2x.webp 2x">
-        <!-- 1х: 1018px; 2x: 2036px -->
-        <source type="image/webp" srcset="img/israel.webp 1x, img/israel@2x.webp 2x">
-
-        <!-- 1х: 320px; 2x: 640px -->
-        <source media="(max-width: 767px)" srcset="img/israel-mob.png 1x, img/israel-mob@2x.png 2x">
-        <!-- 1х: 1018px; 2x: 2036px -->
-        <img src="img/israel.png" srcset="img/israel@2x.png 2x" width="1018" height="340"
-          alt="Израиль">
-      </picture>
-      <div class="intro__wrapper">
-        <h1>Учёба, путешествие и карьера для еврейской молодёжи</h1>
-        <picture>
-          <!-- 1х: 320px; 2x: 640px -->
-          <source type="image/webp" media="(max-width: 767px)"
-            srcset="img/girl-mob.webp 1x, img/girl-mob@2x.webp 2x">
-          <!-- 1х: 1366px; 2x: 2732px -->
-          <source type="image/webp" srcset="img/girl.webp 1x, img/girl@2x.webp 2x">
-
-          <!-- 1х: 320px; 2x: 640px -->
-          <source media="(max-width: 767px)" srcset="img/girl-mob.png 1x, img/girl-mob@2x.png 2x">
-          <!-- 1х: 1366px; 2x: 2732px -->
-          <img src="img/girl.png" srcset="img/girl@2x.png 2x" width="1366" height="966"
-            alt="Фото девушки с израильским флагом">
-        </picture>
-        <svg class="scroll-icon" width="76" height="76">
-          <use xlink:href="img/sprite.svg#scroll"></use>
-        </svg>
-      </div>
+      <h1>Учёба, путешествие и карьера для еврейской молодёжи</h1>
+      <button class="intro__scroll">
+        <span class="visually-hidden">Подсказка - скролл страницы вниз</span>
+      </button>
     </section>
+    <picture>
+      <!-- 1х: 320px; 2x: 640px -->
+      <source type="image/webp" media="(max-width: 767px)" srcset="">
+      <!-- 1х: 1366px; 2x: 2732px -->
+      <source type="image/webp" srcset="">
+
+      <!-- 1х: 320px; 2x: 640px -->
+      <source media="(max-width: 767px)" srcset="">
+      <!-- 1х: 1366px; 2x: 2732px -->
+      <img src="" srcset="" width="" height="" alt="">
+    </picture>
   </main>
+  <div class="modal modal__call">
+    <div class="modal__wrapper modal__wrapper--form">
+      <button class="modal__toggle modal__toggle--form" type="button">
+        <span class="visually-hidden">Закрыть</span>
+        <svg class="modal__close" width="18" height="17">
+          <use xlink:href="img/sprite.svg#icon-close"></use>
+        </svg>
+      </button>
+        <h3 class="modal__title">Заказать звонок</h3>
+        <p>Оставьте ваши контактные данные, мы&nbsp;свяжемся
+        с&nbsp;вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!</p>
+        <form class="modal__form" action="https://echo.htmlacademy.ru" method="GET">
+          <label> <span class="visually-hidden">Ваше имя</span>
+            <input type="text" name="name" placeholder="Имя" required>
+          </label>
+          <label> <span class="visually-hidden">Номер телефона</span>
+            <input type="tel" name="tel" placeholder="Телефон" pattern="\+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" title="Введите номер в формате +7(ххх)ххх-хх-хх" required>
+          </label>
+          <button class="modal__button modal__button--form" type="submit">перезвоните мне</button>
+          <input class="visually-hidden" type="checkbox" name="agreement" id="agreement" required>
+          <label class="modal__agree" for="agreement">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal modal__success">
+    <div class="modal__wrapper modal__wrapper--success">
+      <button class="modal__toggle modal__toggle--success" type="button">
+        <span class="visually-hidden">Закрыть</span>
+        <svg class="modal__close" width="18" height="17">
+          <use xlink:href="img/sprite.svg#icon-close"></use>
+        </svg>
+      </button>
+      <h3>Заявка принята</h3>
+      <p>Мы приняли ваши данные и вскоре мы перезвоним вам для уточнения деталей!</p>
+      <button class="modal__button modal__button--success" type="button">Понятно</button>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
 </body>
 </html>

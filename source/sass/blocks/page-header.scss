@@ -1,7 +1,63 @@
 .page-header {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 32px 110px 0;
+  z-index: 5;
+  padding: 32px 8.5% 0 8%;
+  background-color: transparent;
+
+  @media (max-width: $mobile-width) {
+    padding: 20px 3% 17px 5%;
+    flex-direction: column;
+    min-height: 80px;
+    align-content: space-between;
+    align-items: flex-end;
+    background-color: $white;
+  }
+}
+
+.page-header__item {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18px;
+  color: $dark;
+
+  @media (max-width: $mobile-width) {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  &:not(:last-child) {
+    padding-right: 15px;
+
+    @media (max-width: $mobile-width) {
+      padding-right: 0;
+    }
+  }
+
+  &--modal {
+    border-bottom: 1px dashed $dark;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+    color: $blue;
+    border-color: $blue;
+  }
+}
+
+.page-header__logo {
+  padding-right: 37px;
+
+  @media (max-width: $mobile-width) {
+    order: -1;
+    width: 120px;
+    padding: 0;
+  }
 }

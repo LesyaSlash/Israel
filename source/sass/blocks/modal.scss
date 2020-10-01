@@ -1,0 +1,200 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(235, 235, 235, 0.95);
+}
+
+.modal--open {
+  display: block;
+}
+
+.modal__wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 480px;
+  background-color: $white;
+  border-radius: 8px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: $mobile-width) {
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+  }
+
+  &--form {
+    padding: 57px 72px 40px 48px;
+
+    @media (max-width: $mobile-width) {
+      padding: 22vh 5%;
+    }
+  }
+
+  &--success {
+    padding: 215px 60px 112px;
+    text-align: center;
+
+    @media (max-width: $mobile-width) {
+      padding: 296px 5% 0;
+    }
+  }
+
+  &--success::after {
+    position: absolute;
+    top: 120px;
+    left: 206px;
+    width: 71px;
+    height: 64px;
+    background: url("../img/ok-check.svg") no-repeat;
+    content: "";
+
+    @media (max-width: $mobile-width) {
+      top: 201px;
+      left: 51%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.modal__wrapper h3 {
+  @include h3-desktop;
+  margin: 0 0 18px;
+
+  @media (max-width: $mobile-width) {
+    @include h3-mobile;
+    margin-bottom: 16px;
+  }
+}
+
+.modal__wrapper p {
+  font-size: 15px;
+  margin: 0;
+
+  @media (max-width: $mobile-width) {
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: center;
+    margin: 0 3%;
+  }
+}
+
+.modal__form {
+  margin-top: 32px;
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+  }
+}
+
+.modal__form input {
+  margin-bottom: 8px;
+  padding: 24px 40px 17px;
+  width: 100%;
+  border-radius: 80px;
+  border: solid 2px #e3e3e3;
+
+  &::placeholder {
+    font-family: "Fira Sans", "Arial", sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 20px;
+    opacity: 0.5;
+    text-transform: uppercase;
+  }
+}
+
+.modal__button {
+  display: flex;
+  justify-content: center;
+  padding: 20px 5px 19px;
+  width: 264px;
+  font-weight: 500;
+  line-height: 20px;
+  color: $white;
+  text-transform: uppercase;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  border-width: 0;
+  border-radius: 80px;
+  background-image: linear-gradient(108.42deg, $yellow 20.46%, $yellow-gradient 65.31%);
+
+  &--form {
+    margin: 16px 48px 16px 60px;
+
+    @media (max-width: $mobile-width) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &--success {
+    margin: 32px auto 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 264px;
+  }
+}
+
+.modal__agree {
+  position: relative;
+  display: block;
+  margin: 0 48px 0 60px;
+  padding-left: 24px;
+  width: 264px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(72, 72, 72, 0.74);
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    border-style: solid;
+    border-width: 2px;
+    border-image-source: linear-gradient(108.42deg, $yellow 20.46%, $yellow-gradient 65.31%);
+    border-image-slice: 1;
+    content: "";
+  }
+
+  @media (max-width: $mobile-width) {
+    margin: 0 auto;
+  }
+}
+
+.modal__form input[type="checkbox"]:checked + label::before {
+  background: url("../img/icon-close.svg") no-repeat center / contain;
+}
+
+.modal__toggle {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  width: 18px;
+  height: 17px;
+  padding: 0;
+  background-color: transparent;
+  background-image: url("../img/icon-close.svg");
+  border: none;
+
+  @media (max-width: $mobile-width) {
+    top: 24px;
+    right: 24px;
+  }
+}
+
+.modal__scroll-hidden {
+  overflow: hidden;
+}
