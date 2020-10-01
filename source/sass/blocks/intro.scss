@@ -1,3 +1,57 @@
 .intro {
-  padding: 10px;
+  margin-top: -80px;
+  padding: 540px 10% 110px;
+  text-align: center;
+  background: url("../img/girl.png") no-repeat center top,
+    url("../img/israel.png") no-repeat center 160px,
+    url("../img/intro-bg.jpg") no-repeat center top #ede9e7;
+
+  @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+    background-image: url("../img/girl@2x.png"),
+      url("../img/israel@2x.png"),
+      url("../img/intro-bg@2x.jpg");
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: -48px;
+    padding: 303px 5% 58px;
+    background: url("../img/girl-mob.png") no-repeat center bottom -18px / 320px auto,
+      url("../img/israel-mob.png") no-repeat center 136px / contain,
+      url("../img/intro-bg-mob.jpg") no-repeat center bottom / cover #ede9e7;
+
+    @media (min-width: 670px) {
+      background-position: center bottom -18px, center 136px, center bottom -40px;
+    }
+
+    @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+      background-image: url("../img/girl-mob@2x.png"),
+        url("../img/israel-mob@2x.png"),
+        url("../img/intro-bg-mob@2x.jpg");
+    }
+  }
+}
+
+.intro h1 {
+  width: 350px;
+  margin: 0 auto 30px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+  color: $white;
+
+  @media (max-width: $mobile-width) {
+    width: 288px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.intro__scroll {
+  width: 100px;
+  height: 140px;
+  background: url("../img/scroll-down.svg") no-repeat center top transparent;
+  border: none;
+  cursor: pointer;
 }
