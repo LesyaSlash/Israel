@@ -2,8 +2,16 @@
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 700;
   font-size: 40px;
+  letter-spacing: -0.8px;
   line-height: 49px;
   color: $blue;
+  text-transform: uppercase;
+}
+
+@mixin title-mobile {
+  font-size: 32px;
+  letter-spacing: -0.64px;
+  line-height: 39px;
 }
 
 @mixin h3-desktop {

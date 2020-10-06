@@ -1,16 +1,17 @@
 .intro {
   margin-top: -80px;
-  padding: 540px 10% 110px;
+  padding: 540px 10% 102px;
   text-align: center;
-  background: url("../img/girl.png") no-repeat center top,
+  background: url("../img/girl.png") no-repeat center top / cover,
     url("../img/israel.png") no-repeat center 160px,
-    url("../img/intro-bg.jpg") no-repeat center top #ede9e7;
+    url("../img/intro-bg.jpg") no-repeat center top / cover #ede9e7;
 
   @media (min-resolution: $retina-dpi),
     (min-resolution: $retina-dppx) {
     background-image: url("../img/girl@2x.png"),
       url("../img/israel@2x.png"),
       url("../img/intro-bg@2x.jpg");
+    background-size: cover, 74.5%, cover;
   }
 
   @media (max-width: $mobile-width) {
