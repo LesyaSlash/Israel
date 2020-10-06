@@ -133,4 +133,56 @@
     closeModal(modalSuccessOverlay);
     scrollOn();
   });
+
+  // табы
+  var tabButtons = document.querySelectorAll('.programm__tab-item');
+
+  /* // активный элемент в мобильной версии всегда по центру
+   var scrollToActiveItem = function (item) {
+     var scrollParent = item.parentNode;
+
+     // Ширина родителя — «окна», в котором прокручивается меню
+     var scrollParentWidth = scrollParent.clientWidth;
+
+     // Ширина активного пункта меню
+     var activeElWidth = item.clientWidth;
+
+     // Смещение активного пункта меню по горизонтали от левого края родителя
+     var activeElLeftOffset = item.offsetLeft;
+
+     // Проверяем, не влезает ли активный элемент в «окно»
+     var isActiveElInvisible = activeElLeftOffset + activeElWidth > scrollParentWidth;
+
+     if (isActiveElInvisible) {
+       // Прокручиваем родителя так, чтобы активный элемент стал точно по центру:
+       // scrollLeft = activeElLeftOffset прокрутит активный элемент к левому краю «окна»;
+       // scrollLeft = activeElLeftOffset - (scrollParentWidth / 2) прокрутит активный элемент
+       // так, что он станет левым краем по центру «окна».
+       scrollParent.scrollLeft = activeElLeftOffset - (scrollParentWidth / 2) + (activeElWidth / 2);
+     } else {
+       scrollParent.scrollLeft = 0;
+     }
+   };*/
+
+  tabButtons.forEach(function (button) {
+    button.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      var link = button.querySelector('a');
+      var tab = document.querySelector(link.getAttribute('href'));
+      var activeTab = document.querySelector('.programm__tab-item--active');
+
+      activeTab.classList.remove('programm__tab-item--active');
+      document.querySelector('.programm__content-item--active')
+          .classList.remove('programm__content-item--active');
+
+      button.classList.add('programm__tab-item--active');
+      tab.classList.add('programm__content-item--active');
+
+      /* if (window.matchMedia('(max-width: 767px)').matches) {
+        scrollToActiveItem(button);
+      }
+    });*/
+    });
+  });
+
 })();

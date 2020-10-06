@@ -1,0 +1,268 @@
+.programm {
+  padding: 88px 22.7% 15px 15.37%;
+  background: url("../img/sketch.png") no-repeat right top 41px;
+
+  @media (max-width: $tablet-width) {
+    padding: 10px 9% 15px 9%;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 80px 0 0;
+    background: url("../img/sketch-mob.png") no-repeat right top 198px;
+  }
+}
+
+.programm h2 {
+  @include title-desktop;
+  margin: 0 0 56px;
+
+  @media (max-width: $mobile-width) {
+    @include title-mobile;
+    text-align: center;
+    margin-bottom: 0;
+  }
+}
+
+.programm__wrapper {
+  display: flex;
+
+  @media (max-width: $mobile-width) {
+    flex-wrap: wrap;
+  }
+}
+
+
+.programm__tab-list {
+  @include list-style(0, 0, none);
+  min-width: 228px;
+  margin-right: 64px;
+
+  @media (max-width: $mobile-width) {
+    display: flex;
+    margin-top: 16px;
+    width: 100%;
+  }
+}
+
+.programm__tab-limiter {
+  @media (max-width: $mobile-width) {
+  width: 100vw;
+  padding: 0;
+  overflow-x: scroll;}
+}
+
+.programm__tab-item {
+  position: relative;
+  padding: 22px 10px 22px 72px;
+  margin: 0;
+
+  @media (max-width: $mobile-width) {
+    padding: 11px 13px 9px 50px;
+  }
+
+  &:first-child {
+    margin-top: 6px;
+    margin-bottom: 6px;
+
+    @media (max-width: $mobile-width) {
+      margin: 0;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    left: 20px;
+    top: 17px;
+    width: 36px;
+    height: 40px;
+    cursor: pointer;
+    content: "";
+
+    @media (max-width: $mobile-width) {
+    top: 6px;
+    left: 10px;
+    opacity: 0.4;
+    }
+  }
+
+  &--general::before {
+    background: url("../img/css_sprite.png") -5px -114px;
+  }
+
+  &--academic::before {
+    background: url("../img/css_sprite.png") -10px -10px;
+  }
+
+  &--internship::before {
+    background: url("../img/css_sprite.png") -172px -3px;
+  }
+
+  &--volunteering::before {
+    background: url("../img/css_sprite.png") -64px -60px;
+  }
+
+  &--religion::before {
+    background: url("../img/css_sprite.png") -4px -165px;
+  }
+}
+
+.programm__tab-item:not(.programm__tab-item--active):hover a{
+  background: $gradient;
+  background-clip: unset;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: $yellow-gradient;
+}
+
+.programm__tab-item--general:hover::before {
+  background: url("../img/css_sprite.png") -53px -114px;
+}
+
+.programm__tab-item--academic:hover::before {
+  background: url("../img/css_sprite.png") -66px -10px;
+}
+
+.programm__tab-item--internship:hover::before {
+  background: url("../img/css_sprite.png") -172px -48px;
+}
+
+.programm__tab-item--volunteering:hover::before {
+  background: url("../img/css_sprite.png") -120px -5px;
+}
+
+.programm__tab-item--religion:hover::before {
+  background: url("../img/css_sprite.png") -90px -165px;
+}
+
+.programm__tab-item--active {
+  background-image: $gradient;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  &::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(-45deg, $white 24px, transparent 24px),
+    linear-gradient(-135deg, $white 24px, transparent 24px);
+    content: "";
+
+    @media(max-width: $mobile-width) {
+      display: none;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 11px 13px 9px 50px;
+    border-radius: 60.6704px;
+  }
+
+  &::before {
+    @media (max-width: $mobile-width) {
+      opacity: 1;
+    }
+  }
+}
+
+.programm__tab-item--active.programm__tab-item--general::before {
+  background: url("../img/css_sprite.png") -101px -118px;
+}
+
+.programm__tab-item--active.programm__tab-item--academic::before {
+  background: url("../img/css_sprite.png") -10px -65px;
+}
+
+.programm__tab-item--active.programm__tab-item--internship::before {
+  background: url("../img/css_sprite.png") -174px -100px;
+
+  @media (max-width: $mobile-width) {
+    background-position-y: -96px;
+  }
+}
+
+.programm__tab-item--active.programm__tab-item--volunteering::before {
+  background: url("../img/css_sprite.png") -122px -59px;
+}
+
+.programm__tab-item--active.programm__tab-item--religion::before {
+  background: url("../img/css_sprite.png") -47px -171px;
+
+  @media (max-width: $mobile-width) {
+    background-position-y: -167px;
+  }
+}
+
+.programm__tab-link {
+  font-size: 15px;
+  line-height: 18px;
+  color: $dark;
+  opacity: 0.87;
+
+  @media (max-width: $mobile-width) {
+    opacity: 0.35;
+  }
+}
+
+.programm__tab-item--active a {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 19px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  color: $white;
+  opacity: 1;
+
+  @media (max-width: $mobile-width) {
+    font-size: 15px;
+    opacity: 1;
+  }
+}
+
+.programm__content-list {
+  @include list-style(0, 0, none);
+
+  @media (max-width: $mobile-width) {
+    margin: 0 5%;
+  }
+}
+
+.programm__content-list h3 {
+  @include h3-desktop;
+  margin: 26px 0;
+
+  @media (max-width: $mobile-width) {
+    @include h3-mobile;
+    margin: 32px 0 17px;
+  }
+}
+
+.programm__content-item p {
+  margin: 0;
+  font-size: 15px;
+  opacity: 0.87;
+
+  @media (max-width: $mobile-width) {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+.programm__content-item p:not(:first-of-type) {
+  margin-top: 20px;
+  padding-right: 25px;
+
+  @media (max-width: $mobile-width) {
+    margin-top: 16px;
+    padding-right: 0;
+  }
+}
+
+.programm__content-item:not(.programm__content-item--active) {
+  display: none;
+}
+
+
+/* background: linear-gradient(-45deg, $white 24px, $transparent 24px),
+ linear-gradient(-135deg, $white 24px, $transparent 24px);*/
