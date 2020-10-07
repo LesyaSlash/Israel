@@ -48,6 +48,7 @@
           <!-- 1х: 870px; 2x: 1740px -->
           <img src="img/video.png" srcset="img/video@2x.png 2x" width="870" height="460" alt="Видео">
         </picture>
+      </div>
     </section>
     <section class="programm">
       <h2>программы</h2>
@@ -141,6 +142,57 @@
         </ul>
       </div>
     </section>
+    <section class="wish-to-go">
+      <div class="wish-to-go__wrapper">
+        <h2>Хочу поехать!</h2>
+        <p>Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!</p>
+        <form class="wish-to-go__form" action="https://echo.htmlacademy.ru" method="GET">
+          <label> <span class="visually-hidden">Номер телефона</span>
+            <input type="tel" name="tel" placeholder="Телефон" pattern="\+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}"
+            title="Введите номер в формате +7(ххх)ххх-хх-хх" required>
+          </label>
+          <button class="wish-to-go__button" type="submit">перезвоните мне</button>
+        </form>
+      </div>
+      <picture>
+        <!-- 1х: 320px; 2x: 640px-->
+        <source type="image/webp" media="(max-width: 767px)" srcset="img/girl-flag-bg-mob.webp 1x, img/girl-flag-bg-mob@2x.webp 2x">
+        <!-- 1х: 818px; 2x: 1636px-->
+        <source type="image/webp" srcset="img/girl-flag-bg.webp 1x, img/girl-flag-bg@2x.webp 2x">
+
+        <!-- 1х: 320px; 2x: 640px -->
+        <source media="(max-width: 767px)" srcset="img/girl-flag-bg-mob.png 1x, img/girl-flag-bg-mob@2x.png 2x">
+        <!-- 1х: 818px; 2x: 1636px -->
+        <img src="img/girl-flag-bg.png" srcset="img/girl-flag-bg@2x.png" width="818" height="594" alt="Фотография девушки с флагом Израиля">
+      </picture>
+    </section>
+    <section class="how-to-go">
+      <picture>
+        <!-- 1х: 581px; 2x: 1636px-->
+        <source type="image/webp" srcset="img/how.webp 1x, img/how@2x.webp 2x">
+
+        <!-- 1х: 818px; 2x: 1636px -->
+        <img src="img/how.png" srcset="img/how@2x.png" width="581" height="707"
+          alt="Фотография счастливых клиентов">
+      </picture>
+      <div class="how-to-go__wrapper">
+        <h2>Как поехать</h2>
+        <p>Чтобы узнать подробнее о программе, свяжитесь с координатором в&nbsp;вашем городе. Вы получите актуальные сведения о
+        доступных программах и городах, в которых можете пройти программу.</p>
+        <h3>Чтобы иметь возможность получить грант на обучение
+        от&nbsp;4200 до&nbsp;8400$, вы должны:</h3>
+        <ol class="how-to-go__list">
+          <li>Быть в возрасте от 16 до 30 лет</li>
+          <li>Иметь оконченное среднее образование</li>
+          <li>Иметь документально подтверждённые еврейские корни
+          и&nbsp;пройти консульскую проверку</li>
+          <li>За последние 2 года быть не больше 3х месяцев
+          подряд непрерывно в Израиле.</li>
+        </ol>
+        <p>Если вы не подходите по этим правилам, вы всё равно можете
+          принять участие в программе «Маса», оплатив её полную стоимость.</p>
+      </div>
+    </section>
 
   </main>
   <div class="modal modal__call">
@@ -167,7 +219,6 @@
         </form>
       </div>
     </div>
-  </div>
   <div class="modal modal__success">
     <div class="modal__wrapper modal__wrapper--success">
       <button class="modal__toggle modal__toggle--success" type="button">
