@@ -46,9 +46,10 @@
 
 .programm__tab-limiter {
   @media (max-width: $mobile-width) {
-  width: 100vw;
-  padding: 0;
-  overflow-x: scroll;}
+    width: 100vw;
+    padding: 0;
+    overflow-x: scroll;
+  }
 }
 
 .programm__tab-item {
@@ -79,9 +80,9 @@
     content: "";
 
     @media (max-width: $mobile-width) {
-    top: 6px;
-    left: 10px;
-    opacity: 0.4;
+      top: 6px;
+      left: 10px;
+      opacity: 0.4;
     }
   }
 
@@ -106,7 +107,7 @@
   }
 }
 
-.programm__tab-item:not(.programm__tab-item--active):hover a{
+.programm__tab-item:not(.programm__tab-item--active):hover a {
   background: $gradient;
   background-clip: unset;
   -webkit-background-clip: text;
@@ -146,10 +147,10 @@
     width: 100px;
     height: 100%;
     background-image: linear-gradient(-45deg, $white 24px, transparent 24px),
-    linear-gradient(-135deg, $white 24px, transparent 24px);
+      linear-gradient(-135deg, $white 24px, transparent 24px);
     content: "";
 
-    @media(max-width: $mobile-width) {
+    @media (max-width: $mobile-width) {
       display: none;
     }
   }

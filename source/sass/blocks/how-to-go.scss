@@ -1,0 +1,150 @@
+.how-to-go {
+  display: flex;
+  padding-top: 156px;
+  padding-left: 12px;
+  background: url("../img/watercolor-how.png") no-repeat left top -44px,
+    url("../img/stamp.png") no-repeat right top 60%;
+
+  @media (max-width: $tablet-width) {
+    padding: 0;
+    background: url("../img/stamp-mob.png") no-repeat right top 51%;
+  }
+}
+
+.how-to-go__wrapper {
+  margin-left: 90px;
+  width: 540px;
+
+  @media (max-width: $mobile-width) {
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+.how-to-go__wrapper h2 {
+  @include title-desktop;
+  margin: 32px 0 0 16px;
+
+  @media (max-width: $mobile-width) {
+    @include title-mobile;
+    margin: 0 5% 24px;
+    text-align: center;
+  }
+}
+
+.how-to-go__wrapper p {
+  margin: 24px 20px 0 16px;
+  font-size: 15px;
+  opacity: 0.87;
+
+  @media (max-width: $mobile-width) {
+    margin: 0;
+    padding: 0 5%;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  &:last-of-type {
+    position: relative;
+    margin: 46px 0 10px;
+    padding-left: 32px;
+    font-size: 15px;
+    line-height: 1.4;
+    opacity: 0.5;
+
+    @media (max-width: $mobile-width) {
+      margin: 0;
+      padding-left: 24px;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 14px;
+      width: 4px;
+      height: 100%;
+      background-image: $gradient;
+      content: "";
+
+      @media (max-width: $mobile-width) {
+        top: -2px;
+        left: 10px;
+      }
+    }
+  }
+}
+
+.how-to-go__wrapper h3 {
+  font: inherit;
+  font-weight: 500;
+  margin: 35px 20px 24px 16px;
+
+  @media (max-width: $mobile-width) {
+    margin: 25px 5% 11px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}
+
+.how-to-go__list {
+  position: relative;
+  counter-reset: myCounter;
+  margin: 0;
+  padding: 0;
+  background: url("../img/vector.svg") no-repeat top left 17px / 2px 100%;
+
+  @media (max-width: $mobile-width) {
+    margin: 0 2.5%;
+    background-position: top 16px left 17px;
+    background-size: 2px 90%;
+  }
+}
+
+.how-to-go__list li {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  margin-bottom: 40px;
+  min-height: 36px;
+  font-size: 15px;
+  line-height: 1.4;
+  opacity: 0.87;
+  list-style: none;
+
+  @media (max-width: $mobile-width) {
+    margin: 0 0 26px;
+    min-height: 66px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  &::before {
+    flex-shrink: 0;
+    align-self: flex-start;
+    margin-right: 24px;
+    padding-top: 9px;
+    height: 36px;
+    width: 36px;
+    counter-increment: myCounter;
+    content: counter(myCounter);
+    color: $yellow;
+    text-align: center;
+    background-color: $white;
+    border-radius: 50%;
+    box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.1);
+
+    @media (max-width: $mobile-width) {
+      align-self: center;
+      margin-right: 16px;
+      padding-top: 6px;
+    }
+  }
+}
+
+.how-to-go img {
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
