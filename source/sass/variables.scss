@@ -9,4 +9,8 @@ $blue: #1fc0fc;
 $yellow: #ffc341;
 $yellow-gradient: #ffd701;
 $gradient: linear-gradient(108.42deg, $yellow 20.46%, $yellow-gradient 65.31%);
+$gradient-hover: linear-gradient(109.15deg, $yellow -50.3%, $yellow-gradient 63.1%);
+$gradient-click: radial-gradient(150% 119.49% at 50% 50.85%, rgba(0, 0, 0, 0) 30.67%, rgba(3, 3, 3, 0.24) 100%);
+
 $dark: #484848;
+$red: #ff0000;

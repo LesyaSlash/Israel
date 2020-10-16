@@ -1,12 +1,27 @@
 .wish-to-go {
   position: relative;
+  margin: 0 auto;
+  max-width: 1900px;
   padding-left: 15.4%;
   padding-bottom: 135px;
   background: url("../img/backpack.png") no-repeat left 0 top 134px;
 
+  @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+    background-image: url("../img/backpack@2x.png");
+    background-size: 11%;
+    background-position: left top 130px;
+  }
+
   @media (max-width: $tablet-width) {
     padding: 0 0 80px;
     background: url("../img/backpack-mob.png") no-repeat left top 30px;
+
+    @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+      background-image: url("../img/backpack-mob@2x.png");
+      background-size: 32%;
+    }
   }
 }
 
@@ -63,18 +78,37 @@
 
 .wish-to-go__form input {
   width: 100%;
-  padding: 23px 225px 18px 37px;
+  padding: 23px 225px 14px 37px;
+  line-height: 20px;
+  font-weight: 500;
+  color: $dark;
+  opacity: 0.87;
   border-radius: 80px;
   border: solid 2px #e3e3e3;
 
   @media (max-width: $mobile-width) {
     margin-bottom: 8px;
-    padding-bottom: 17px;
+    padding-top: 21px;
+    padding-bottom: 14px;
     padding-right: 20px;
   }
 
   &::placeholder {
     @include placeholder;
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+    border-color: $yellow-gradient;
+  }
+
+  &:required:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: $red;
+  }
+
+  &:required:valid {
+    border-color: rgba(72, 72, 72, 0.5);
   }
 }
 
@@ -105,5 +139,6 @@
 
   @media (max-width: $mobile-width) {
     position: static;
+    width: 100%;
   }
 }

@@ -1,13 +1,28 @@
 .how-to-go {
   display: flex;
+  margin: 0 auto;
+  max-width: 1900px;
   padding-top: 156px;
   padding-left: 12px;
   background: url("../img/watercolor-how.png") no-repeat left top -44px,
     url("../img/stamp.png") no-repeat right top 60%;
 
+  @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+    background-image: url("../img/watercolor-how@2x.png"),
+      url("../img/stamp@2x.png");
+    background-size: cover, 16%;
+  }
+
   @media (max-width: $tablet-width) {
     padding: 0;
     background: url("../img/stamp-mob.png") no-repeat right top 51%;
+
+    @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+      background-image: url("../img/stamp-mob@2x.png");
+      background-size: 68%;
+    }
   }
 }
 
@@ -121,6 +136,7 @@
   }
 
   &::before {
+    display: block;
     flex-shrink: 0;
     align-self: flex-start;
     margin-right: 24px;

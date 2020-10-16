@@ -10,6 +10,13 @@
 
   @media (max-width: $mobile-width) {
     padding: 13px 0 0;
+    background: url("../img/watercolor-mob.png") no-repeat left bottom 38%;
+
+    @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+      background-image: url("../img/watercolor-mob@2x.png");
+      background-size: contain;
+    }
   }
 }
 

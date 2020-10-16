@@ -1,0 +1,74 @@
+.masaisrael {
+  margin: 0 auto;
+  max-width: 1800px;
+  padding: 120px 11% 196px 58.35%;
+  background: #fedcd2 url("../img/masaisrael.jpg") no-repeat left bottom / cover;
+
+  @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+    background-image: url("../img/masaisrael@2x.jpg");
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 120px 15% 20px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 5px 0;
+    background: none;
+  }
+}
+
+.masaisrael h2 {
+  @include title-desktop;
+  margin: 0 0 26px;
+
+  @media (max-width: $tablet-width) {
+    text-align: center;
+    margin-bottom: 0;
+  }
+}
+
+.masaisrael p {
+  margin: 0 0 49px;
+  color: $white;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  opacity: 0.87;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 20px;
+    padding: 96px 7% 41px;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  @media (max-width: $mobile-width) {
+    text-align: left;
+    background: #fedcd2 url("../img/masaisrael-mob.jpg") no-repeat center / cover;
+
+    @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+      background-image: url("../img/masaisrael-mob@2x.jpg");
+    }
+  }
+}
+
+.masaisrael a {
+  @include form-button;
+  width: 230px;
+  padding-top: 18px;
+  padding-bottom: 17px;
+  align-items: flex-end;
+  font-size: 15px;
+
+  @media (max-width: $tablet-width) {
+    margin: 0 auto;
+    width: 264px;
+  }
+}
+
+.masaisrael svg {
+  margin-right: 10px;
+  fill: $white;
+}

@@ -1,0 +1,239 @@
+.reviews {
+  margin: 0 auto;
+  max-width: 1900px;
+  padding: 27px 0 100px;
+  background: url("../img/sketch-review.png") no-repeat right top 23%,
+    url("../img/watercolor-reviews.png") no-repeat right top 45%;
+
+  @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+    background-image: url("../img/sketch-review@2x.png"),
+      url("../img/watercolor-reviews@2x.png");
+    background-size: 38.5%, 100%;
+    background-position: right top 23%, left 74px top 48%;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-bottom: 69px;
+    background: url("../img/sketch-review-mob.png") no-repeat right top 62%,
+      url("../img/watercolor-reviews-mob.png") no-repeat right bottom 20%;
+
+    @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+      background-image: url("../img/sketch-review-mob@2x.png"),
+        url("../img/watercolor-reviews-mob@2x.png");
+      background-size: 90%, cover;
+    }
+  }
+}
+
+.reviews h2 {
+  @include title-desktop;
+  margin: 0 0 8px;
+  text-align: center;
+
+  @media (max-width: $mobile-width) {
+    @include title-mobile;
+    margin-top: 6px;
+    margin-bottom: 24px;
+  }
+}
+
+.reviews__slider {
+  position: relative;
+  overflow: hidden;
+  max-width: 1900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reviews__slider-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.reviews__items {
+  display: flex;
+  transition: transform 0.7s ease;
+}
+
+.reviews__wrapper {
+  flex: 0 0 100%;
+  display: flex;
+  max-width: 100%;
+  padding-left: 7.2%;
+  padding-right: 11%;
+
+  @media (max-width: $mobile-width) {
+    display: block;
+    padding: 0 5%;
+  }
+}
+
+.reviews__wrapper img {
+  @media (max-width: $mobile-width) {
+    margin: 0 auto;
+    width: 83%;
+  }
+}
+
+
+.reviews__text-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 64.4%;
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    padding-top: 10px;
+  }
+}
+
+
+.reviews__item {
+  margin: 0;
+  padding: 41px 0 54px 40px;
+
+  @media (max-width: $mobile-width) {
+    padding: 21px 0 0;
+  }
+}
+
+.reviews__author-name {
+  margin: 0;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+  opacity: 0.74;
+}
+
+.reviews__program {
+  display: flex;
+  margin-top: 9px;
+  margin-bottom: 32px;
+  font-size: 15px;
+  line-height: 1.4;
+
+  @media (max-width: $mobile-width) {
+    display: block;
+    margin-bottom: 22px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+.reviews__program span {
+  margin-right: 8px;
+  color: $blue;
+}
+
+.reviews__program p {
+  margin: 0;
+  opacity: 0.74;
+}
+
+.reviews__item > p {
+  line-height: 1.75;
+  opacity: 0.74;
+  margin: 0 0 16px;
+
+  @media (max-width: $mobile-width) {
+    font-size: 16px;
+    line-height: 1.65;
+    margin-top: 18px;
+
+    &:last-of-type {
+      margin-bottom: 22px;
+    }
+  }
+}
+
+.reviews__item a {
+  line-height: 1.5;
+  color: $blue;
+  text-decoration: underline;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    color: $dark;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 16px;
+  }
+}
+
+.reviews__toggles {
+  margin-left: 40px;
+
+  @media (max-width: $mobile-width) {
+    order: -1;
+    margin: 0 auto;
+  }
+}
+
+.reviews__toggles span {
+  @media (max-width: $mobile-width) {
+    opacity: 0.5;
+  }
+}
+
+.reviews__toggle {
+  margin-left: 16px;
+  width: 11px;
+  height: 17px;
+  background: transparent url("../img/arrow-left.svg") no-repeat center;
+  border: none;
+  cursor: pointer;
+
+  &--next {
+    transform: rotate(180deg);
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0;
+    margin-left: 19px;
+  }
+}
+
+
+.reviews__social {
+  @media (max-width: $mobile-width) {
+    margin-top: 20px;
+  }
+}
+
+.reviews__social a {
+  margin-left: 12px;
+
+  @media (max-width: $mobile-width) {
+    margin-left: 9px;
+
+    &:first-child {
+      margin-left: -4px;
+    }
+
+    &:last-child {
+      margin-left: 14px;
+    }
+  }
+}
+
+.reviews__social svg {
+  opacity: 0.16;
+
+  &:hover {
+    fill: $blue;
+    opacity: 0.5;
+  }
+
+  &:active {
+    fill: $blue;
+    opacity: 0.16;
+  }
+}

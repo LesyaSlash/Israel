@@ -1,0 +1,174 @@
+.life {
+  margin: 0 auto;
+  max-width: 2000px;
+  padding: 160px 5% 131px 7.6%;
+  text-align: center;
+  background: url("../img/watch.png") no-repeat right top 79%,
+    url("../img/watercolor-life.png") no-repeat right top 117px;
+
+  @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+    background-image: url("../img/watch@2x.png"),
+      url("../img/watercolor-life@2x.png");
+    background-size: 6.5%, 100%;
+    background-position: right bottom 245px, right top 116px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 80px 5%;
+    background-image: none;
+  }
+}
+
+.life h2 {
+  @include title-desktop;
+  margin: 0 3% 25px 0;
+
+  @media (max-width: $mobile-width) {
+    @include title-mobile;
+    margin-right: 0;
+    margin-bottom: 23px;
+  }
+}
+
+.life p {
+  margin: 0 17.5%;
+  width: 60%;
+  text-align: right;
+  opacity: 0.87;
+
+  @media (max-width: $tablet-width) {
+    margin: 0 auto;
+    padding-right: 5%;
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: left;
+  }
+}
+
+.life__slider {
+  @media (max-width: $tablet-width) {
+    position: relative;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.life__slider-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.life__list {
+  @include list-style(0, 0, none);
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  padding-top: 46px;
+  padding-left: 497px;
+
+  @media (max-width: $tablet-width) {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 49px;
+    padding-left: 0;
+    transition: transform 0.6s ease;
+  }
+
+  @media (max-width: $mobile-width) {
+    justify-content: flex-start;
+  }
+}
+
+.life__list li {
+  position: relative;
+  margin-bottom: 30px;
+  margin-right: 4.3%;
+
+  @media (max-width: $tablet-width) {
+    flex: 0 0 100%;
+    margin-right: 0;
+    margin-bottom: 0;
+    max-width: 100%;
+  }
+}
+
+.life__list li:first-child {
+  position: absolute;
+  left: 0;
+  top: -20px;
+
+  @media (max-width: $tablet-width) {
+    position: relative;
+  }
+}
+
+.life__item:nth-child(5n-1) {
+  @media (min-width: 1024px) and (max-width: 1347px) {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.life__list span {
+  position: absolute;
+  bottom: 32px;
+  left: 11%;
+  padding-right: 10%;
+  font-family: "Raleway", "Arial", sans-serif;
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 25px;
+  color: $white;
+  text-align: left;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+
+  @media (max-width: $mobile-width) {
+    bottom: 25px;
+    left: 0;
+    padding: 0 8%;
+    width: 100%;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+  }
+}
+
+.life__item:nth-child(5n-1) span {
+  left: 7.5%;
+  padding-right: 5%;
+
+  @media (max-width: $mobile-width) {
+    left: 0;
+    padding: 0 8%;
+  }
+}
+
+.life__item:nth-child(5n-2) span {
+  left: 7.5%;
+
+  @media (max-width: $mobile-width) {
+    left: 0;
+    padding: 0 7.5%;
+  }
+}
+
+.life__item:first-child span {
+  left: 8%;
+  padding-right: 15%;
+
+  @media (max-width: $mobile-width) {
+    left: 0;
+    padding: 0 8%;
+  }
+}
+
+.life__list img {
+  @media (max-width: $tablet-width) {
+    width: 100%;
+  }
+}

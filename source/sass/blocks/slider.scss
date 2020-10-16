@@ -1,0 +1,36 @@
+/* стили для индикаторов */
+@media (max-width: $tablet-width) {
+  .slider__indicators {
+    @include list-style(0, 0, none);
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+    left: 0;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    margin-right: 15%;
+    margin-left: 15%;
+    background-color: white;
+  }
+
+  .slider__indicators li {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 6px;
+    height: 6px;
+    opacity: 0.2;
+    margin-right: 4px;
+    margin-left: 4px;
+    background-color: $dark;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .slider__indicators li.active {
+    width: 8px;
+    height: 8px;
+    background: $gradient;
+    opacity: 1;
+  }
+}
