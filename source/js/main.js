@@ -212,8 +212,8 @@
       }
 
       // наполнение массива _itemsArray
-      for (var i = 0; i < sliderItems.length; i++) {
-        itemsArray.push({item: sliderItems[i], position: i, transform: 0});
+      for (var n = 0; n < sliderItems.length; n++) {
+        itemsArray.push({item: sliderItems[n], position: n, transform: 0});
       }
 
       // переменная position содержит методы, с помощью которой можно получить минимальный и максимальный индекс элемента, а также соответствующему этому индексу позицию
