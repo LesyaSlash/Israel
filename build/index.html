@@ -149,7 +149,7 @@
         <p>Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!</p>
         <form class="wish-to-go__form" action="https://echo.htmlacademy.ru" method="GET">
           <label> <span class="visually-hidden">Номер телефона</span>
-            <input type="tel" name="tel" placeholder="Телефон" pattern="\+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" title="Введите номер в формате +7(ххх)ххх-хх-хх" required="">
+            <input type="tel" name="tel" placeholder="Телефон" pattern="(\+7|8)[0-9]{10}" title="Введите 11 цифр номера, начиная с +7 или 8" required="">
           </label>
           <button class="wish-to-go__button" type="submit">перезвоните мне</button>
         </form>
@@ -330,31 +330,31 @@
         <div class="reviews__slider-wrapper slider__wrapper">
           <div class="reviews__items slider__items">
             <div class="reviews__wrapper slider__item">
-          <picture>
-            <!-- 1х: 240px; 2x: 480px-->
-            <source type="image/webp" media="(max-width: 767px)" srcset="img/user-photo-mob.webp 1x, img/user-photo-mob@2x.webp 2x">
-            <!-- 1х: 364px; 2x: 728px-->
-            <source type="image/webp" srcset="img/user-photo.webp 1x, img/user-photo@2x.webp 2x">
+              <picture>
+              <!-- 1х: 240px; 2x: 480px-->
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/user-photo-mob.webp 1x, img/user-photo-mob@2x.webp 2x">
+              <!-- 1х: 364px; 2x: 728px-->
+              <source type="image/webp" srcset="img/user-photo.webp 1x, img/user-photo@2x.webp 2x">
 
-            <!-- 1х: 240px; 2x: 480px -->
-            <source media="(max-width: 767px)" srcset="img/user-photo-mob.png 1x, img/user-photo-mob@2x.png 2x">
-            <!-- 1х: 364px; 2x: 728px -->
-            <img src="img/user-photo.png" srcset="img/user-photo@2x.png" width="364" height="480" alt="Фотография автора отзыва">
-          </picture>
-          <div class="reviews__text-wrapper">
-            <blockquote class="reviews__item">
-              <cite class="reviews__author-name">Ольга Михайлова</cite>
-              <div class="reviews__program">
+              <!-- 1х: 240px; 2x: 480px -->
+              <source media="(max-width: 767px)" srcset="img/user-photo-mob.png 1x, img/user-photo-mob@2x.png 2x">
+              <!-- 1х: 364px; 2x: 728px -->
+              <img src="img/user-photo.png" srcset="img/user-photo@2x.png" width="364" height="480" alt="Фотография автора отзыва">
+              </picture>
+              <div class="reviews__text-wrapper">
+                <blockquote class="reviews__item">
+                 <cite class="reviews__author-name">Ольга Михайлова</cite>
+                 <div class="reviews__program">
                 <span>Программа:</span>
                 <p>Арт-Тель, февраль-сентябрь 2017</p>
-              </div>
-              <p>Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло
-              оказаться в надежных и заботливых руках Анны, Юлии и Олега.</p>
-              <p>С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым
-              вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей
-              программой в разные уголки страны.</p>
-              <a href="#">Читать подробнее</a>
-            </blockquote>
+                </div>
+                <p>Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло
+                оказаться в надежных и заботливых руках Анны, Юлии и Олега.</p>
+                <p>С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым
+                вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей
+                программой в разные уголки страны.</p>
+                <a href="#">Читать подробнее</a>
+                </blockquote>
             <div class="reviews__toggles">
               <span>1 / 6</span>
               <button class="reviews__toggle slider__control slider__control_prev" type="button" aria-label="Предыдущий отзыв">
@@ -666,7 +666,7 @@
         <h2>Узнать подробности</h2>
         <div class="contacts__city">
           <span>Ваш город:</span>
-          <p>новосибирск</p>
+          <a href="#">новосибирск</a>
         </div>
         <div class="contacts__curator">
             <picture>
@@ -727,7 +727,7 @@
             <input type="text" name="name" placeholder="Имя" required="">
           </label>
           <label> <span class="visually-hidden">Номер телефона</span>
-            <input type="tel" name="tel" placeholder="+7(923)41_ __ __" pattern="\+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" title="Введите номер в формате +7(ххх)ххх-хх-хх" required="">
+            <input type="tel" name="tel" placeholder="Телефон" pattern="(\+7|8)[0-9]{10}" title="Введите 11 цифр номера, начиная с +7 или 8" required="">
           </label>
           <button type="submit">перезвоните мне</button>
         </form>
@@ -784,7 +784,7 @@
             <input type="text" name="name" placeholder="Имя" required="" autofocus="">
           </label>
           <label> <span class="visually-hidden">Номер телефона</span>
-            <input type="tel" name="tel" placeholder="Телефон" pattern="\+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" title="Введите номер в формате +7(ххх)ххх-хх-хх" required="">
+            <input type="tel" name="tel" placeholder="Телефон" pattern="(\+7|8)[0-9]{10}" title="Введите 11 цифр номера, начиная с +7 или 8" required="">
           </label>
           <button class="modal__button modal__button--form" type="submit">перезвоните мне</button>
           <input class="visually-hidden" type="checkbox" name="agreement" id="agreement" required="">

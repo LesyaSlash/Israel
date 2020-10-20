@@ -4,15 +4,19 @@
   text-align: center;
   background: url("../img/girl.png") no-repeat center top / cover,
     url("../img/israel.png") no-repeat center 160px,
-    url("../img/intro-bg.jpg") no-repeat center top / cover #ede9e7;
+    url("../img/intro-bg.jpg") no-repeat center top / cover #dbb6a3;
 
   @media (min-resolution: $retina-dpi),
     (min-resolution: $retina-dppx) {
     background-image: url("../img/girl@2x.png"),
       url("../img/israel@2x.png"),
       url("../img/intro-bg@2x.jpg");
-    background-size: cover, 74.5%, cover;
+    background-size: cover, contain, cover;
   }
+
+   @media (max-width: $tablet-width) {
+     background-size: cover, contain, cover;
+   }
 
   @media (max-width: $mobile-width) {
     margin-top: -48px;

@@ -153,11 +153,14 @@ img {
   margin-top: -80px;
   padding: 540px 10% 102px;
   text-align: center;
-  background: url("../img/girl.png") no-repeat center top/cover, url("../img/israel.png") no-repeat center 160px, url("../img/intro-bg.jpg") no-repeat center top/cover #ede9e7; }
+  background: url("../img/girl.png") no-repeat center top/cover, url("../img/israel.png") no-repeat center 160px, url("../img/intro-bg.jpg") no-repeat center top/cover #dbb6a3; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .intro {
       background-image: url("../img/girl@2x.png"), url("../img/israel@2x.png"), url("../img/intro-bg@2x.jpg");
-      background-size: cover, 74.5%, cover; } }
+      background-size: cover, contain, cover; } }
+  @media (max-width: 1023px) {
+    .intro {
+      background-size: cover, contain, cover; } }
   @media (max-width: 767px) {
     .intro {
       margin-top: -48px;
@@ -201,7 +204,8 @@ img {
   background-color: rgba(235, 235, 235, 0.95); }
 
 .modal--open {
-  display: block; }
+  display: block;
+  overflow-y: scroll; }
 
 .modal__wrapper {
   position: absolute;
@@ -221,7 +225,6 @@ img {
       -webkit-transform: none;
               transform: none;
       width: 100%;
-      height: 100vh;
       text-align: center; } }
   .modal__wrapper--form {
     padding: 57px 72px 40px 48px; }
@@ -341,6 +344,7 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 20px 5px 19px;
+  font-family: "Fira Sans", "Arial", sans-serif;
   font-weight: 500;
   line-height: 20px;
   color: #ffffff;
@@ -349,6 +353,7 @@ img {
   border-width: 0;
   border-radius: 80px;
   background-image: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
+  cursor: pointer;
   width: 264px; }
   .modal__button:hover {
     background-image: linear-gradient(109.15deg, #ffc341 -50.3%, #ffd701 63.1%); }
@@ -374,7 +379,8 @@ img {
   width: 264px;
   font-size: 13px;
   line-height: 1.5;
-  color: rgba(72, 72, 72, 0.74); }
+  color: rgba(72, 72, 72, 0.74);
+  cursor: pointer; }
   .modal__agree::before {
     position: absolute;
     top: 0;
@@ -403,13 +409,15 @@ img {
   padding: 0;
   background-color: transparent;
   background-image: url("../img/icon-close.svg");
-  border: none; }
+  border: none;
+  cursor: pointer; }
   @media (max-width: 767px) {
     .modal__toggle {
       top: 24px;
       right: 24px; } }
 
 .modal__scroll-hidden {
+  position: fixed;
   overflow: hidden; }
 
 .about {
@@ -865,6 +873,7 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 20px 5px 19px;
+  font-family: "Fira Sans", "Arial", sans-serif;
   font-weight: 500;
   line-height: 20px;
   color: #ffffff;
@@ -873,6 +882,7 @@ img {
   border-width: 0;
   border-radius: 80px;
   background-image: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
+  cursor: pointer;
   position: absolute;
   top: 0;
   right: 0;
@@ -1224,6 +1234,7 @@ img {
     width: 100%; } }
 
 .masaisrael {
+  position: relative;
   margin: 0 auto;
   max-width: 1800px;
   padding: 120px 11% 196px 58.35%;
@@ -1237,6 +1248,12 @@ img {
   @media (max-width: 767px) {
     .masaisrael {
       padding: 5px 0;
+      background: #fedcd2 url("../img/masaisrael-mob@2x.jpg") no-repeat center bottom 58%/cover; } }
+  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+    .masaisrael {
+      background-image: url("../img/masaisrael-mob@2x.jpg"); } }
+  @media (max-width: 405px) {
+    .masaisrael {
       background: none; } }
 
 .masaisrael h2 {
@@ -1267,9 +1284,11 @@ img {
       text-align: center; } }
   @media (max-width: 767px) {
     .masaisrael p {
-      text-align: left;
+      text-align: left; } }
+  @media (max-width: 405px) {
+    .masaisrael p {
       background: #fedcd2 url("../img/masaisrael-mob.jpg") no-repeat center/cover; } }
-  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+  @media (max-width: 405px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 405px) and (min-resolution: 144dpi), (max-width: 405px) and (min-resolution: 1.5dppx) {
     .masaisrael p {
       background-image: url("../img/masaisrael-mob@2x.jpg"); } }
 
@@ -1281,6 +1300,7 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 20px 5px 19px;
+  font-family: "Fira Sans", "Arial", sans-serif;
   font-weight: 500;
   line-height: 20px;
   color: #ffffff;
@@ -1289,6 +1309,7 @@ img {
   border-width: 0;
   border-radius: 80px;
   background-image: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
+  cursor: pointer;
   width: 230px;
   padding-top: 18px;
   padding-bottom: 17px;
@@ -1574,7 +1595,7 @@ img {
   opacity: 0.74; }
 
 .reviews__item > p {
-  line-height: 1.75;
+  line-height: 29px;
   opacity: 0.74;
   margin: 0 0 16px; }
   @media (max-width: 767px) {
@@ -1627,17 +1648,22 @@ img {
 
 @media (max-width: 767px) {
   .reviews__social {
-    margin-top: 20px; } }
+    margin-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; } }
 
 .reviews__social a {
   margin-left: 12px; }
   @media (max-width: 767px) {
     .reviews__social a {
-      margin-left: 9px; }
+      margin-left: 14px; }
       .reviews__social a:first-child {
         margin-left: -4px; }
       .reviews__social a:last-child {
-        margin-left: 14px; } }
+        margin-left: 18px; } }
 
 .reviews__social svg {
   opacity: 0.16; }
@@ -1723,15 +1749,16 @@ img {
     background: url("../img/css_sprite.png") -227px -53px;
     content: ""; }
 
-.contacts__city p {
+.contacts__city a {
   margin: 0 0 0 17px;
   font-size: 14px;
   line-height: 1.8;
   font-weight: 500;
+  color: inherit;
   text-transform: uppercase;
   border-bottom: 1px dashed #1fc0fc; }
   @media (max-width: 767px) {
-    .contacts__city p {
+    .contacts__city a {
       margin-left: 16px; } }
 
 .contacts__curator {
@@ -1809,7 +1836,6 @@ img {
 
 .contacts__map {
   max-width: 59%;
-  position: relative;
   margin-top: 7px;
   margin-bottom: 64px;
   margin-left: auto; }
@@ -1820,22 +1846,6 @@ img {
       margin-bottom: 20px;
       max-width: 100%;
       width: 100%; } }
-  .contacts__map::before {
-    position: absolute;
-    top: 51.1%;
-    right: 23.1%;
-    z-index: 10;
-    width: 20px;
-    height: 30px;
-    background: url("../img/css_sprite.png") -226px -10px;
-    content: ""; }
-    @media (max-width: 1023px) {
-      .contacts__map::before {
-        top: 48.8%;
-        right: 9.8%;
-        width: 26px;
-        height: 40px;
-        background: url("../img/marker-map.svg") no-repeat center/26px 40px; } }
 
 .contacts__callback {
   display: -webkit-box;
@@ -1844,7 +1854,8 @@ img {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding-right: 5%; }
+  padding-right: 5%;
+  width: 100%; }
   @media (max-width: 1023px) {
     .contacts__callback {
       display: block;
@@ -1884,7 +1895,11 @@ img {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding-left: 15px; }
+  padding-left: 15px;
+  width: calc(100% - 364px); }
+  @media (max-width: 1023px) {
+    .contacts__form {
+      width: 100%; } }
   @media (max-width: 767px) {
     .contacts__form {
       display: block;
@@ -1894,7 +1909,9 @@ img {
       max-width: 380px; } }
 
 .contacts__form label {
-  margin-right: 24px; }
+  margin-right: 24px;
+  width: 31%;
+  max-width: 249px; }
   @media (max-width: 767px) {
     .contacts__form label {
       margin-right: 0; } }
@@ -1964,6 +1981,7 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 20px 5px 19px;
+  font-family: "Fira Sans", "Arial", sans-serif;
   font-weight: 500;
   line-height: 20px;
   color: #ffffff;
@@ -1972,7 +1990,9 @@ img {
   border-width: 0;
   border-radius: 80px;
   background-image: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
-  width: 216px; }
+  cursor: pointer;
+  width: 216px;
+  font-size: 15px; }
   .contacts__form button:hover {
     background-image: linear-gradient(109.15deg, #ffc341 -50.3%, #ffd701 63.1%); }
   .contacts__form button:active {

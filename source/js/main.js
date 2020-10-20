@@ -141,6 +141,7 @@
   wishForm.addEventListener('submit', function (evt) {
     evt.preventDefault();
     upload(new FormData(wishForm), uploadSuccessHandler);
+    scrollOff();
     if (isStorageSupport) {
       localStorage.setItem('wishPhone', wishPhone.value);
     }
@@ -154,6 +155,7 @@
   contactsForm.addEventListener('submit', function (evt) {
     evt.preventDefault();
     upload(new FormData(contactsForm), uploadSuccessHandler);
+    scrollOff();
     if (isStorageSupport) {
       localStorage.setItem('contactsPhone', contactsPhone.value);
       localStorage.setItem('ncontactsName', contactsName.value);

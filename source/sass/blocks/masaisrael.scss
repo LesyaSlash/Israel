@@ -1,4 +1,5 @@
 .masaisrael {
+  position: relative;
   margin: 0 auto;
   max-width: 1800px;
   padding: 120px 11% 196px 58.35%;
@@ -15,6 +16,15 @@
 
   @media (max-width: $mobile-width) {
     padding: 5px 0;
+    background: #fedcd2 url("../img/masaisrael-mob@2x.jpg") no-repeat center bottom 58% / cover;
+
+      @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+        background-image: url("../img/masaisrael-mob@2x.jpg");
+      }
+  }
+
+  @media (max-width: 405px) {
     background: none;
   }
 }
@@ -45,10 +55,13 @@
 
   @media (max-width: $mobile-width) {
     text-align: left;
+  }
+
+  @media (max-width: 405px) {
     background: #fedcd2 url("../img/masaisrael-mob.jpg") no-repeat center / cover;
 
     @media (min-resolution: $retina-dpi),
-      (min-resolution: $retina-dppx) {
+    (min-resolution: $retina-dppx) {
       background-image: url("../img/masaisrael-mob@2x.jpg");
     }
   }

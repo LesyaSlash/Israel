@@ -72,11 +72,12 @@
   }
 }
 
-.contacts__city p {
+.contacts__city a {
   margin: 0 0 0 17px;
   font-size: 14px;
   line-height: 1.8;
   font-weight: 500;
+  color: inherit;
   text-transform: uppercase;
   border-bottom: 1px dashed $blue;
 
@@ -173,7 +174,6 @@
 
 .contacts__map {
   max-width: 59%;
-  position: relative;
   margin-top: 7px;
   margin-bottom: 64px;
   margin-left: auto;
@@ -185,31 +185,13 @@
     max-width: 100%;
     width: 100%;
   }
-
-  &::before {
-    position: absolute;
-    top: 51.1%;
-    right: 23.1%;
-    z-index: 10;
-    width: 20px;
-    height: 30px;
-    background: url("../img/css_sprite.png") -226px -10px;
-    content: "";
-
-    @media (max-width: $tablet-width) {
-      top: 48.8%;
-      right: 9.8%;
-      width: 26px;
-      height: 40px;
-      background: url("../img/marker-map.svg") no-repeat center / 26px 40px;
-    }
-  }
 }
 
 .contacts__callback {
   display: flex;
   align-items: flex-start;
   padding-right: 5%;
+  width: 100%;
 
   @media (max-width: $tablet-width) {
     display: block;
@@ -254,6 +236,11 @@
   display: flex;
   align-items: flex-start;
   padding-left: 15px;
+  width: calc(100% - 364px);
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+  }
 
   @media (max-width: $mobile-width) {
     display: block;
@@ -266,6 +253,8 @@
 
 .contacts__form label {
   margin-right: 24px;
+  width: 31%;
+  max-width: 249px;
 
   @media (max-width: $mobile-width) {
     margin-right: 0;
@@ -282,6 +271,7 @@
   opacity: 0.87;
   border-radius: 80px;
   border: solid 2px #e3e3e3;
+
 
   @media (max-width: $mobile-width) {
     box-sizing: border-box;
@@ -309,6 +299,7 @@
 .contacts__form button {
   @include form-button;
   width: 216px;
+  font-size: 15px;
 
   @media (max-width: $mobile-width) {
     margin: 16px auto 0;
