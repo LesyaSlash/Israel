@@ -14,9 +14,9 @@
     background-size: cover, contain, cover;
   }
 
-   @media (max-width: $tablet-width) {
-     background-size: cover, contain, cover;
-   }
+  @media (max-width: $tablet-width) {
+    background-size: cover, contain, cover;
+  }
 
   @media (max-width: $mobile-width) {
     margin-top: -48px;

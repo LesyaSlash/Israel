@@ -451,4 +451,53 @@
     }
   }
 
+  // Отключение табов на неактивных отзывах
+  var tabIndexOff = function (element) {
+    element.setAttribute('tabindex', '-1');
+  };
+
+  var tabIndexOn = function (element) {
+    element.removeAttribute('tabindex', '-1');
+  };
+
+  var observerSettings = {
+    root: document.querySelector('.reviews__slider-wrapper'),
+    threshold: 1.0
+  };
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach((function (entry) {
+        if (!entry.isIntersecting) {
+          return;
+        } else {
+          setVisible(entry.target);
+        }
+      }));
+    }, observerSettings);
+
+    var setVisible = function (section) {
+      var visible = document.querySelector('.visible');
+      if (visible) {
+        visible.classList.remove('visible');
+        visible.querySelectorAll('a').forEach(function (link) {
+          tabIndexOff(link);
+        });
+        visible.querySelectorAll('button').forEach(function (button) {
+          tabIndexOff(button);
+        });
+      }
+      section.classList.add('visible');
+      section.querySelectorAll('a').forEach(function (link) {
+        tabIndexOn(link);
+      });
+      section.querySelectorAll('button').forEach(function (button) {
+        tabIndexOn(button);
+      });
+    };
+
+    var slides = document.querySelectorAll('.reviews__wrapper');
+    slides.forEach(function (slide) {
+      observer.observe(slide);
+    });
+  }
 })();
