@@ -29,7 +29,7 @@
     left: 0;
     transform: none;
     width: 100%;
-    text-align: center;
+    box-shadow: none;
   }
 
   &--form {
@@ -45,7 +45,7 @@
     text-align: center;
 
     @media (max-width: $mobile-width) {
-      padding: 296px 5% 0;
+      padding: 296px 5% 45px;
     }
   }
 
@@ -73,6 +73,7 @@
   @media (max-width: $mobile-width) {
     @include h3-mobile;
     margin-bottom: 16px;
+    text-align: center;
   }
 }
 

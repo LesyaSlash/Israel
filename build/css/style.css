@@ -225,7 +225,8 @@ img {
       -webkit-transform: none;
               transform: none;
       width: 100%;
-      text-align: center; } }
+      -webkit-box-shadow: none;
+              box-shadow: none; } }
   .modal__wrapper--form {
     padding: 57px 72px 40px 48px; }
     @media (max-width: 767px) {
@@ -236,7 +237,7 @@ img {
     text-align: center; }
     @media (max-width: 767px) {
       .modal__wrapper--success {
-        padding: 296px 5% 0; } }
+        padding: 296px 5% 45px; } }
   .modal__wrapper--success::after {
     position: absolute;
     top: 120px;
@@ -265,7 +266,8 @@ img {
       font-size: 24px;
       letter-spacing: -0.48px;
       line-height: 29px;
-      margin-bottom: 16px; } }
+      margin-bottom: 16px;
+      text-align: center; } }
 
 .modal__wrapper p {
   font-size: 15px;
