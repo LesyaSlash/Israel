@@ -237,7 +237,7 @@ img {
     text-align: center; }
     @media (max-width: 767px) {
       .modal__wrapper--success {
-        padding: 296px 5% 45px; } }
+        padding: 296px 5% 70px; } }
   .modal__wrapper--success::after {
     position: absolute;
     top: 120px;
