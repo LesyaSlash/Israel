@@ -33,7 +33,8 @@
     "start": "gulp start",
     "images": "gulp images",
     "webp": "gulp webp",
-    "sprite": "gulp sprite"
+    "sprite": "gulp sprite",
+    "deploy": "gulp build && gh-pages -d build"
   },
   "browserslist": [
     "last 2 versions",
